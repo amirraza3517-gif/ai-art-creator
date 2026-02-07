@@ -58,9 +58,10 @@
             <a href="#" class="underline mx-2">Contact Us</a>
         </div>
     </footer>
+    
     <script>
         function startTimer(e) {
-            let timer = 15;
+            let timer = 10;
             let btn = e.target;
             btn.disabled = true;
             let interval = setInterval(() => {
@@ -68,9 +69,7 @@
                 timer--;
                 if(timer < 0) {
                     clearInterval(interval);
-                    btn.innerText = "COPIED ✅";
-                    alert("Prompt: 'A realistic 3D character of a boy sitting stylishly with his name written in 3D neon letters on the background.'");
-                    btn.disabled = false;
+                    window.location.href = "prompt.html"; 
                 }
             }, 1000);
         }
